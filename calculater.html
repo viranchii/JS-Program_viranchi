@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculater</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0      ;
+    }
+    body {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      padding: 20px ;
+    }
+    .main {
+      background-color: #304452;
+      border: 2px solid black;
+      height: 700px;
+      width: 100%;
+      max-width: 520px;
+      padding: 30px ;
+      position: relative;
+      outline: none;
+      border: none;   
+       box-shadow: 5px 10px 8px 10px #888888;
+       border-radius: 20px;
+       display: flex;
+      
+    }
+    .clac {
+      width: 450px;
+      border: 1px solid black;
+      height: 80px;
+      text-align: right;
+      font-size: 40px;
+      box-shadow: 0px 6px 6px 0px #000a11;
+     
+    }
+    input {
+      border: 3px solid gray;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 15px;
+      border-radius: 20px;
+    
+    }
+    .box{
+           width: 20%;
+           height: 60px;
+           margin: 9px;
+           outline: none;
+           border: none;
+         font-size: 30px;
+         cursor: pointer;
+         box-shadow: -8px -8px 15px rgba(255,255,255,0.1),5px 5px,15px rgba(0,0,0,0.2);
+         box-shadow: 5px 5px 5px #aaaaaa;
+        
+    }
+    .box1{
+      width: 20%;
+           height: 60px;
+           margin: 9px;
+           outline: none;
+           border: none;
+         font-size: 30px;
+         color: rgb(28, 144, 216);
+         box-shadow: 0px 4px 4px 0px;
+         cursor: pointer;
+
+         }
+         .equal{
+          width: 44%;
+           height: 60px;
+           margin: 9px;
+           outline: none;
+           border: none;
+         font-size: 30px;
+         box-shadow: 0px 4px 4px 0px;
+         cursor: pointer;
+         background-color:  rgb(28, 144, 216); 
+         color: black;
+         }
+.equal:hover{
+background-color: lightblue;
+box-shadow: inset  3px 4px 4px 3px;
+}
+    .display{
+      display: flex;
+      justify-content: end;
+      border: transparent;
+     
+
+    }
+   
+    
+    </style>
+    <body>
+    <div class="main">
+      <form action="#" name="form" style="padding: 0px 0px;">
+        <div class="display">
+        <input class="clac" type="text" name="answer" />
+      </div>
+        <script>
+          function focusevent()
+          {
+            document.getElementById("clac").style.background="pink";
+          }
+        
+          function sinclicked()
+          {
+            form.answer.value=Math.sin(form.answer.value);
+          }
+          
+          function cosclicked()
+          {
+            form.answer.value=Math.cos(form.answer.value);
+          }
+          
+          function tanclicked()
+          {
+            form.answer.value=Math.tan(form.answer.value);
+          }
+      </script>
+        <br>
+        <br>
+        <input class="box1" type="button" value="AC" onclick="form.answer.value = ' ' " >
+        <input class="box1" type="button" value="DE" onclick="form.answer.value=form.answer.value.slice(0,-1)" >
+        <input class="box1" type="button" value="%" onclick="form.answer.value += '%' ">
+        <input class="box1" type="button" value="/" onclick="form.answer.value += '/' ">
+        <br>
+        <input class="box1" type="button" value="sin" onclick="sinclicked() ">
+        <input class="box1" type="button" value="cos" onclick="cosclicked() ">
+        <input class="box1" type="button" value="ten" onclick="tanclicked() ">
+        <input class="box1" type="button" value="*" onclick="form.answer.value += '*' ">
+         <br>
+        <input class="box" type="button" value="7" onclick="form.answer.value += '7' ">
+        <input  class="box" type="button" value="8" onclick="form.answer.value += '8' ">
+        <input  class="box" type="button" value="9" onclick="form.answer.value += '9' ">
+        <input  class="box1" type="button" value="-" onclick="form.answer.value += '-' ">
+        <br>
+        <input class="box" type="button" value="4" onclick="form.answer.value += '4' ">
+        <input  class="box" type="button" value="5" onclick="form.answer.value += '5' ">
+        <input  class="box" type="button" value="6" onclick="form.answer.value += '6' ">
+        <input  class="box1" type="button" value="+" onclick="form.answer.value += '+' ">
+        <br>
+       
+        <input class="box" type="button" value="1" onclick="form.answer.value += '1' ">
+        <input  class="box" type="button" value="2" onclick="form.answer.value += '2' ">
+        <input  class="box" type="button" value="3" onclick="form.answer.value += '3' ">
+        <input  class="box1" type="button" value="." onclick="form.answer.value += '.' ">
+       
+       
+       
+        <br>
+        <div style="margin-top: 5px;">
+        <input class="box" type="button" value="0" onclick="form.answer.value += '0' ">
+        <input  class="box" type="button" value="00" onclick="form.answer.value += '00' ">
+        
+        <input  class="equal" style="width: 44%;" type="button" value="=" onclick="form.answer.value =eval(form.answer.value) ">
+      </div>
+         
+
+      
+      </form>
+    
+     
+
+    </div>
+  </body>
+</html>

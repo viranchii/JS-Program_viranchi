@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="fname"><b>First Name:</b></label>
+    <input type="text" name="No1" id="No1">
+    <br><br>
+    <label for="lname"><b>Last Name:</b></label>
+    <input type="text" name="No2" id="No2">
+     <br><br>
+    <input type="button"  onclick="sum()" name="submit" value="submit">
+    <h2 id="ans">Sum</h2>
+    <!--input type="text" name="ans" id="ans"--> <!--second method-->
+
+    <script>
+        function sum()
+    {
+        x=parseInt(document.getElementById("No1").value);
+        y=parseInt(document.getElementById("No2").value);
+        z=x+y;
+       document.getElementById("ans").innerHTML=z;
+       //document.getElementById("ans").value=z;
+    }
+    sum;
+    </script>
+</body>
+</html>

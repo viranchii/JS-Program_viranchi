@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>The keyup Event</h2>
+
+<p>Use the addEventListener() method to attach a "keyup" event to an input element.</p>
+
+<p>A function is triggered when the user releases a key in the input field.</p>
+<p>The function transforms the input field to upper case:</p>
+
+Enter your name: <input type="text" id="fname">
+
+<script>
+document.getElementById("fname").addEventListener("keyup", myFunction);
+
+function myFunction() {
+  let x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+</body>
+</html>

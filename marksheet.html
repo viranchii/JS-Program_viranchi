@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Student Markesheet!!</h3>
+
+    <table border="3" >
+      <tr>
+        <th colspan="2">MARKSHEET</th>
+      </tr>
+      <tr>
+        <td><label for="">First Name:</label></td>
+        <td><input type="text" name="fn" id="fn" /></td>
+      </tr>
+      <tr>
+        <td><label for="">Last Name:</label></td>
+        <td><input type="text" name="ln" id="ln" /></td>
+      </tr>
+      <tr>
+        <td><label for="">Class:</label></td>
+        <td><input type="text" name="class" id="class" /></td>
+      </tr>
+      <tr>
+        <td><label for="">Roll No:</label></td>
+        <td><input type="text" name="rno" id="rno" /></td>
+      </tr>
+
+      <tr>
+        <td><label for="">Gujarati Marks:</label></td>
+        <td><input type="text" name="gm" id="gm" /></td>
+      </tr>
+      <tr>
+        <td><label for="">English Marks:</label></td>
+        <td><input type="text" name="em" id="em" /></td>
+      </tr>
+      <tr>
+        <td><label for="">Maths Marks:</label></td>
+        <td><input type="text" name="mm" id="mm" /></td>
+      </tr>
+      <tr>
+        <td><label for="">Physics Marks:</label></td>
+        <td><input type="text" name="pm" id="pm" /></td>
+      </tr>
+      <tr>
+        <td><label for=""> Chemistry Marks:</label></td>
+        <td><input type="text" name="cm" id="cm" /></td>
+      </tr>
+  
+    </table>
+    <br>
+    <input type="button" onclick="sum()" name="submit" value="submit" />
+ 
+    <h2 id="ans1"></h2>
+    <h2 id="ans2"></h2>
+    <h2 id="ans3"></h2>
+    <h2 id="ans4"></h2>
+    <h2 id="ans5"></h2>
+    <h2 id="ans6"></h2>
+    <h2 id="ans7"></h2>
+    <h2 id="ans8"></h2>
+    <h2 id="ans9"></h2>
+   
+    <table border="3" style="width: 30%;float: left;" >
+      <tr>
+        <td><h1>Total:</h1></td>
+        <td><h1 id="total" style="text-align: center;"></h1></td>
+        </tr>
+        <tr>
+          <td><h1>Percentage:</h1></td>
+        <td><h1 id="per"  style="text-align: center;"></h1></td>
+      </tr>
+      <tr>
+        <td><h1>Grade:</h1></td>
+        <td><h1 id="grade"  style="text-align: center;"></h1></td>
+      </tr>
+  
+  </table>
+
+    <script>
+      function sum() 
+      {
+        a = (document.getElementById("fn").value);
+        b = (document.getElementById("ln").value);
+        c = (document. getElementById("class").value);
+        d = parseInt(document. getElementById("rno").value);
+        e = parseInt(document. getElementById("gm").value);
+        f = parseInt(document. getElementById("em").value);
+        g = parseInt(document. getElementById("mm").value);
+        h = parseInt(document. getElementById("pm").value);
+        i = parseInt(document. getElementById("cm").value);
+
+        total=e+f+g+h+i;
+        per=total/500*100;
+       
+        
+        
+        document.getElementById("ans1").innerHTML = ("First Name=") + a;
+        document.getElementById("ans2").innerHTML = ("Last Name=") + b;
+        document.getElementById("ans3").innerHTML = ("class=") + c;
+        document.getElementById("ans4").innerHTML = ("Roll no=") + d;
+        document.getElementById("ans5").innerHTML = ("Gujarati marks=") + e;
+        document.getElementById("ans6").innerHTML = ("English marks=") + f;
+        document.getElementById("ans7").innerHTML = ("Maths marks=") + g;
+        document.getElementById("ans8").innerHTML = ("Physics Marks=") + h;
+        document.getElementById("ans9").innerHTML = ("Chemistry Marks=") + i;
+        document.getElementById("total").innerHTML=total;
+        document.getElementById("per").innerHTML=per;
+        
+        if(per>=60)
+        {
+        document.getElementById("grade").innerHTML="A";
+        // document.write("The Result is :"+"<b>"+"pass");
+        }
+        else
+        {
+         //document.write("The Result is :"+"<b>"+"Fail"+"<b>");
+          document.getElementById("grade").innerHTML="B";
+        }
+      
+
+      }
+      
+     
+      sum();
+     
+    </script>
+  </body>
+</html>

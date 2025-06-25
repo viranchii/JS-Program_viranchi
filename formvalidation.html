@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Css Folder/bootstrap.min.css" />
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(130, 106, 251);
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      padding: 20px;
+      font-family: sans-serif;
+    }
+    .main {
+      border-radius: 20px;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      width: 800px;
+      background-color: white;
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    input,
+    textarea,
+    select {
+      box-shadow: 5px 5px 10px #ddd;
+    }
+    button {
+      box-shadow: 10px 10px rgb(227, 226, 231);
+    }
+  </style>
+  <script>
+    function Register() {
+      var fname = document.regform.fname.value;
+      var email = document.regform.email.value;
+      var phonenumber = document.regform.phonenumber.value;
+      var what = document.regform.subject.value;
+      var password = document.regform.password.value;
+      var Address = document.regform.Address.value;
+
+      var atposition = email.indexOf("@");
+      var dotposition = email.lastIndexOf(".");
+      if (
+        atposition < 1 ||
+        dotposition < atposition + 2 ||
+        dotposition + 2 >= email.length
+      ) {
+        alert(
+          "Please enter a valid e-mail address \n atpostion:" +
+            atposition +
+            "\n dotposition:" +
+            dotposition
+        );
+        return false;
+      }
+      var regPhone = /^\d{10}$/;
+      var regfname = /\d+$/g;
+
+      if (fname == "" || regfname.test(fname)) {
+        window.alert("Please enter your name properly.");
+        fname.focus();
+        return false;
+      }
+      if (email == "" || !regEmail.test(email)) {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+      }
+      if (phonenumber == "" || !regPhonenumber.test(phonenumber)) {
+        alert("Please enter valid phone number.");
+        phonenumber.focus();
+        return false;
+      }
+      if (what.selectedIndex == -1) {
+        alert("Please enter your course.");
+        what.focus();
+        return false;
+      }
+      if (password == "") {
+        alert("Please enter your password");
+        password.focus();
+        return false;
+      }
+
+      if (password.length < 6) {
+        alert("Password should be atleast 6 character long");
+        password.focus();
+        return false;
+      }
+      return true;
+    }
+  </script>
+  <body>
+    <div class="main">
+      <div class="container">
+        <h1>Register Here!!</h1>
+        <hr />
+
+        <form name="regform" onsubmit="return Register()" method="post">
+          <div class="form-group" id="input-box">
+            <label for="fname">Full Name:</label><br />
+            <input
+              type="text"
+              name="fname"
+              id="fname"
+              class="form-control form-control-lg"
+              placeholder="Enter Your Fullname"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              class="form-control form-control-lg"
+              placeholder="example@gmail.com"
+            />
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="">Phone Number:</label>
+              <input
+                type="text"
+                name="phonenumber"
+                id="pno"
+                class="form-control form-control-lg"
+                placeholder="Enter phonenumber"
+              />
+            </div>
+            <div class="col">
+              <label for="">Password:</label>
+              <input
+                type="text"
+                name="password"
+                id="password"
+                class="form-control form-control-lg"
+                placeholder="At least 6 character"
+              />
+            </div>
+          </div>
+
+          <br />
+          <label for="">Gender:</label><br />
+          <div class="form-check-inline">
+            <label class="form-check-label"> </label>
+            <input
+              type="radio"
+              name="gender"
+              id="check"
+              class="form-check-input"
+            />
+            <p style="font-size: 1.5rem">Male</p>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label"> </label>
+            <input
+              type="radio"
+              name="gender"
+              id="check"
+              class="form-check-input"
+            />
+            <p style="font-size: 1.5rem">Female</p>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label"> </label>
+            <input
+              type="radio"
+              name="gender"
+              id="check"
+              class="form-check-input"
+            />
+            <p style="font-size: 1.5rem">Other</p>
+          </div>
+
+          <div class="form-group">
+            <label for="sel1">Intrested Domain:</label>
+            <select
+              class="form-control form-control-lg"
+              id="sub"
+              name="subject"
+            >
+              <option value="">--select Intrested Domain--</option>
+              <option>Full Stack Devlopment</option>
+              <option>Advance App Devlopment</option>
+              <option>Advance Artificial Intelligence</option>
+              <option>UI/UX Designing</option>
+              <option>Cyber Security</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="comment">Address:</label>
+            <textarea
+              class="form-control form-control-lg"
+              rows="1"
+              id="comment"
+              name="Address"
+            ></textarea>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="sel1">State:</label>
+              <select
+                class="form-control form-control-lg"
+                id="sel1"
+                name="sellist1"
+              >
+                <option value="">--Select a State--</option>
+                <option value="Maharastra">Guj atat</option>
+                <option value="keral">Maharastra</option>
+                <option value="bihar">Bihar</option>
+                <option value="up">Utter Pradesh</option>
+                <option value="punjab">Punjab</option>
+              </select>
+            </div>
+            <div class="col">
+              <label for="sel1">City:</label>
+              <select
+                class="form-control form-control-lg"
+                id="sel1"
+                name="sellist1"
+              >
+                <option value="">--Select a City--</option>
+                <option value="Maharastra">Ahmedabad</option>
+                <option value="keral">Bhavanagar</option>
+                <option value="bihar">Gandhinagar</option>
+                <option value="up">Utter Bhuj</option>
+                <option value="punjab">Bharuch</option>
+              </select>
+            </div>
+          </div>
+          <br />
+          <button type="submit" class="btn btn-info btn-block">Register</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

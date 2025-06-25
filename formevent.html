@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--Input-->
+    <!--p>Use the addEventListener() method to attach an input event to an input element.</p>
+
+<p>Write something in the text field:</p>
+
+<label for="">Enter Name:</label>
+<input type="text" name="name" id="input" value="viranchi">
+
+<p id="demo"></p>
+
+<script>
+    document.getElementById("input").addEventListener("input",myfun);
+
+    function myfun(){
+        document.getElementById("demo").innerHTML=  "The value of input text is changed";
+    }
+</script-->
+
+<!--Submit-->
+
+<!--form id="myForm">
+Enter name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", myFunction);
+
+function myFunction() {
+  alert("The form was submitted");
+}
+</script-->
+
+
+
+<p>Use the addEventListener() method to attach a "change" event to an input element.</p>
+
+Enter your name: <input type="text" id="fname">
+
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+document.getElementById("fname").addEventListener("change", myFunction);
+
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+</body>
+</html>

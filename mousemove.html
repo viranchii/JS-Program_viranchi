@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        height: 200px;
+        width: 200px;
+        border: 1px solid black;
+        box-shadow: 0px 4px 4px 0px;
+    }
+</style>
+<body>
+    <h2>The onmousemove Event</h2>
+
+<p>Use the addEventListener() method to attach a "mousemove" event to a div element.</p>
+
+<div class="main"></div>
+
+<p id="demo"></p>
+
+<script>
+    document.getElementById("main").addEventListener("mousemove",function(event) {
+    myFunction(event);
+});
+
+    function myFunction(e){
+        let x = e.clientX;
+         let  y = e.clientY;
+    let coor = "Coordinates: (" + x + "," + y + ")";
+    document.getElementById("demo").innerHTML = coor;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 50px 0px;
+      }
+      .main {
+        width: 100%;
+        border: 3px solid black;
+        background-color: #ffffff;
+        padding-bottom: 50px;
+      }
+      h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.5rem;
+      }
+      .info {
+        margin: 30px;
+        border: 2px solid rgb(182, 179, 179);
+      }
+      h2 {
+        text-decoration: underline;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "Courier New", Courier, monospace;
+      }
+      table {
+        width: 100%;
+      }
+      .main table,
+      th,
+      td {
+        text-align: left;
+      }
+      .mark {
+        text-transform: uppercase;
+        margin: 30px;
+        border: 2px solid rgb(182, 179, 179);
+      }
+      .mark input {
+        width: 50px;
+      }
+      .btn {
+        margin-bottom: 20px;
+        background-color: black;
+        color: #ffffff;
+        border-radius: 8px;
+        font-size: 1rem;
+        border: none;
+        margin-left: 150px;
+        padding: 8px 20px;
+        text-align: center;
+      }
+      .main1 {
+        border: 5px solid;
+        border-style: double;
+        padding-bottom: 50px;
+        width: 99%;
+      }
+      .result {
+        margin: 30px;
+        border: 2px solid rgb(182, 179, 179);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>STUDENT MARSHEET</h1>
+
+      <div class="info">
+        <h2>--:Student Information:--</h2>
+
+        <table>
+          <tr>
+            <th>First Name:</th>
+            <td><input type="text" name="fname" id="fname" /></td>
+            <th>Roll No:</th>
+            <td><input type="text" name="rno" id="rno" /></td>
+          </tr>
+
+          <tr>
+            <th>Last Name:</th>
+            <td><input type="text" name="lname" id="lname" /></td>
+            <th>Date Of Birth:</th>
+            <td><input type="text" name="dob" id="dob" /></td>
+          </tr>
+
+          <tr>
+            <th>Institute Name:</th>
+            <td><input type="text" name="iname" id="iname" /></td>
+            <th>Batch:</th>
+            <td><input type="year" name="batch" id="batch" /></td>
+          </tr>
+
+          <tr>
+            <th>Exam Month Year:</th>
+            <td><input type="text" name="eyear" id="eyear" /></td>
+            <th>Seat No:</th>
+            <td><input type="year" name="sno" id="sno" /></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="mark">
+        <h2>--:Subject marks:--</h2>
+        <table>
+          <tr>
+            <th>sr.no</th>
+            <th>Subject Name</th>
+            <th>Passing marks</th>
+            <th>Mark obtained</th>
+          </tr>
+
+          <tr>
+            <td>1.</td>
+            <td>back-end Devlopment</td>
+            <td>100/35</td>
+            <th><input type="number" name="bend" id="bend" ></th>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td>Front-end Devlopment</td>
+            <td>100/35</td>
+            <th><input type="number" name="fend" id="fend" ></th>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td>Data base</td>
+            <td>100/35</td>
+            <th><input type="number" name="dbas" id="dbas" ></th>
+          </tr>
+          <tr>
+            <td>4.</td>
+            <td>Devopd</td>
+            <td>100/35</td>
+            <th><input type="number" name="devopd" id="devpod" ></th>
+          </tr>
+          <tr>
+            <td>5.</td>
+            <td>Mobile App Dev</td>
+            <td>100/35</td>
+            <th><input type="number" name="mobile" id="mobile" ></th>
+          </tr>
+        </table>
+      </div>
+
+      <button onclick="submit()" class="btn">SUBMIT</button>
+      <button class="btn">RESET</button>
+    </div>
+
+    <div class="main1">
+      <h1>STUDENT MARKESHEET</h1>
+
+      <div class="info">
+        <h2>STUDENT INFORMATION</h2>
+        <table>
+          <tr>
+            <th>First Name:</th>
+            <td id="fname1"></td>
+            <th>Roll No:</th>
+            <td id="rno1"></td>
+          </tr>
+
+          <tr>
+            <th>Last Name:</th>
+            <td id="lname1"></td>
+            <th>Date of Borth:</th>
+            <td id="dob1"></td>
+          </tr>
+
+          <tr>
+            <th>Institute Name:</th>
+            <td id="iname1"></td>
+            <th>Batch:</th>
+            <td id="batch1"></td>
+          </tr>
+
+          <tr>
+            <th>Exam Month Year:</th>
+            <td id="eyear1"></td>
+            <th>Seat No:</th>
+            <td id="seat1"></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="mark">
+        <h2>Subject mark</h2>
+        <table>
+          <tr>
+            <th>sr.no</th>
+            <th>Subject Name</th>
+            <th>Passing marks</th>
+            <th>Mark obtained</th>
+          </tr>
+
+          <tr>
+            <td>1.</td>
+            <td>back-end Devlopment</td>
+            <td>100/35</td>
+            <th id="bend1"></th>
+            <th id="gread1"></th>
+          </tr>
+
+          <tr>
+            <td>2.</td>
+            <td>Front-end Devlopment</td>
+            <td>100/35</td>
+            <th id="fend1"></th>
+            <th id="gread2"></th>
+          </tr>
+
+          <tr>
+            <td>3.</td>
+            <td>Data base</td>
+            <td>100/35</td>
+            <th id="dbas1"></th>
+            <th id="gread3"></th>
+          </tr>
+
+          <tr>
+            <td>4.</td>
+            <td>Devopd</td>
+            <td>100/35</td>
+            <th id="devopd1"></th>
+            <th id="gread4"></th>
+          </tr>
+
+          <tr>
+            <td>5.</td>
+            <td>Mobile App Dev</td>
+            <td>100/35</td>
+            <th id="mobile1"></th>
+            <th id="gread5"></th>
+          </tr>
+        </table>
+      </div>
+
+      <div class="result">
+        <h2 style="text-align: left; margin-left: 5px">RESULT:-</h2>
+
+        <table>
+          <tr>
+            <th>TOTAL</th>
+            <td id="total"></td>
+            <th>PERCENTAGE</th>
+            <td id="per"></td>
+          </tr>
+
+          <tr>
+            <th>GRADE</th>
+            <td id="grade"></td>
+            <th>PASS/FAIL</th>
+            <td id="p/f"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      function submit()
+      {
+        a=document.getElementById("fname").value;
+        document.getElementById("fname1").innerHTML=a;
+        b=document.getElementById("rno").value;
+        document.getElementById("rno1").innerHTML=b;
+        c=document.getElementById("lname").value;
+        document.getElementById("lname1").innerHTML=c;
+        d=document.getElementById("dob").value;
+        document.getElementById("dob1").innerHTML=d;
+        e=document.getElementById("iname").value;
+        document.getElementById("iname1").innerHTML=e;
+        f=document.getElementById("batch").value;
+        document.getElementById("batch1").innerHTML=f;
+        g=document.getElementById("eyear").value;
+        document.getElementById("eyear1").innerHTML=g;
+        h=document.getElementById("sno").value;
+        document.getElementById("seat1").innerHTML=h;
+
+        i=parseInt(document.getElementById("bend").value);
+        document.getElementById("bend1").innerHTML=i;
+        j=parseInt(document.getElementById("fend").value);
+        document.getElementById("fend1").innerHTML=j;
+        k=parseInt(document.getElementById("dbas").value);
+        document.getElementById("dbas1").innerHTML=k;
+        l=parseInt(document.getElementById("devopd").value);
+        document.getElementById("devopd1").innerHTML=l;
+        m=parseInt(document.getElementById("mobile").value);
+        document.getElementById("mobile1").innerHTML=m;
+
+        total=i+j+k+l+m;
+        document.getElementById("total").innerHTML=total;
+      }
+    </script>
+  </body>
+</html>

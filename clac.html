@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div{
+        text-align: center;
+    }
+    div input{
+        margin: 8px 0;
+        padding: 8px;
+        width: 100%;
+        font-size: 16px;
+    }
+    div button{
+        margin: 0 4px;
+        padding: 6px 0;
+        width: 62px;
+        background-color: #f7f7f7;
+        font-size: 26px;
+        font-weight: bold;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+    div button:hover{
+        background-color: #ccc;
+        border: 2px solid black;
+    }
+    div input[type=text]:read-only
+    {
+        box-shadow: 0px 6px 6px 0px #000a11;
+        text-align: center;
+        font-weight: bold;
+        font-size: 22px;
+        outline: none;
+        text-decoration: none;
+        border: 1px solid black;
+    }
+    div input:hover{
+        box-shadow: 0px 6px 6px 0px #000a11;
+        border: 1px ;
+    }
+</style>
+<body>
+    <div>
+        
+    <input type="text" name="n1" id="n1" placeholder="Enter Number 1"><br>
+    <input type="text" name="n2" id="n2" placeholder="Enter Number 2"><br>
+    <br>
+    <button id="add">+</button>
+    <button id="sub">-</button>
+    <button id="mult">*</button>
+    <button id="div">/</button>
+    <br>
+    <br>
+   
+    <input type="text" name="result" id="result" class="main" readonly>
+</div>
+
+<script>
+    
+    var n1=document.getElementById("n1");
+    var n2=document.getElementById("n2");
+    var res=document.getElementById("result");
+       
+     document.getElementById("add").addEventListener("click",function() 
+     {
+        res.value=parseInt(n1.value)+parseInt(n2.value);
+     });
+
+     document.getElementById("sub").addEventListener("click",function() 
+     {
+        res.value=parseInt(n1.value)-parseInt(n2.value);
+     });
+
+     document.getElementById("mult").addEventListener("click",function() 
+     {
+        res.value=parseInt(n1.value)*parseInt(n2.value);
+     });
+
+     document.getElementById("div").addEventListener("click",function() 
+     {
+        res.value=parseInt(n1.value)/parseInt(n2.value);
+     });
+    
+</script>
+</body>
+</html>

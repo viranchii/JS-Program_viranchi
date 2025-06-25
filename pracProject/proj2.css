@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+body{
+    background-color: #E6E6FA;
+}
+h1{
+    /*background-color: #081b31;*/
+    color: #660033;
+    height: 4rem;
+   line-height: 5rem; /*vertically text center ke liye*/
+   font-size: 3rem;
+    
+}
+.choices{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 6rem;
+}
+
+.choice{
+    height: 200px;
+    width: 200px;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.choice:hover{
+   /* rotate: 10deg;*/
+   transform: scale(1.1);
+    cursor: pointer;
+
+}
+img{
+    height: 150px;
+    width: 150px; 
+    object-fit: cover;
+    border-radius: 50%;
+}
+.score-bord{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #660033;
+    margin-top: 1rem;
+    gap: 5rem;
+}
+#user-score,#comp-score{
+    font-size: 4rem;
+    color: #660033;
+}
+.msg-container{
+    margin-top: 4rem;
+}
+#msg{
+    border: 1px solid #660033;
+    color:white;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #660033;
+}
+#msg:hover{
+    cursor: pointer;
+    
+    color:#E6E6FA ;
+    box-shadow: 5px 5px 4px rgb(102, 100, 100);
+    border: none;
+}

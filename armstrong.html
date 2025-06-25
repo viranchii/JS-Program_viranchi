@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Armstrong number</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      name="demo"
+      id="demo"
+      placeholder="Enter the number"
+    /><br /><br />
+    <button onclick="arm()">Click</button>
+
+    <script>
+      function arm() {
+        // var number=prompt("Enter the number");
+        var sum = 0;
+        num = Number(document.getElementById("demo").value);
+        temp = num;
+
+        while (temp > 0) {
+          a = temp % 10; //%10 means give the reminder (153%10=15.3[3 is reminder])
+          sum = sum + a * a * a;
+          temp = parseInt(temp / 10);
+        }
+        if (sum == num) {
+          alert(num + " " + "is an Armstrong Number");
+        } else {
+          alert(num + " " + "is not Armstrong Number");
+        }
+      }
+    </script>
+  </body>
+</html>
